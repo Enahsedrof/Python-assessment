@@ -241,7 +241,17 @@ def seven(inputString, char):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def eight(arg1):
-	return 0
+	highest = 0
+	numlist = arg1.split()#splits white space
+
+	for num in numlist:
+		sum = 0
+		for digit in num:
+			sum += int(digit)
+		highest = max(sum, highest)
+
+	
+	return highest
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -268,23 +278,15 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	word = input.lower()
-	
-	count = 0
-	
-	for i in word:
-		if i == "bert":
-			count = count +1
-		
-	if count == 1 or count == 0:
+	input = input.lower().split("bert")
+	if len(input) <= 2:
 		return ""
-	else:
-		return word.split("bert")
+	return input[1]
 
 
 	
 
-nine("bertcliverbert")
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 10>
