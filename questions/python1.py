@@ -98,13 +98,13 @@ def two(arg1):
 
 def three(input):
 	vowels = 0
-	input.lower()
 
-	for i in input:
-		if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u'):
-			vowels = vowels + 1
-		else:
-			return vowels
+
+	for i in range(len(input)):
+		if input[i].lower() in "aieou":
+			vowels += 1 
+
+	return vowels
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
