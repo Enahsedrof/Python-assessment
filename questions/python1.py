@@ -250,8 +250,23 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	return ""
+	word = input.lower()
+	
+	count = 0
+	
+	for i in word:
+		if i == "bert":
+			count = count +1
+		
+	if count == 1 or count == 0:
+		return ""
+	else:
+		return word.split("bert")
 
+
+	
+
+nine("bertcliverbert")
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 10>
