@@ -127,7 +127,16 @@ def three(input):
 
 
 def four(input):
-    return False
+
+	for i in range(len(input)):
+		if input[i] =="c":
+			if input[i+1] == "e" and input[i+2] == "i":
+				return True
+		elif input [i] == "i" and input[i-1]!= "c":
+			if input[i+1] == "e":
+				return True
+	return False
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
