@@ -182,6 +182,10 @@ def five(input):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def six(string, int, char):
+	if int > len(string):
+		return False
+	elif string[int-1].lower()==char:
+		return True
 	return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -205,9 +209,12 @@ def six(string, int, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
-	inputString = inputString.replace(" ", "")
-	x = inputString.index(char)
-	return x
+	temp = inputString.replace(" ", "")
+	if char in temp:
+		return temp.index(char)+1
+	return -1
+	#x = temp.index(char)
+	
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
